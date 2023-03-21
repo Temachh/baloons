@@ -1,3 +1,31 @@
+// Colors
+
+$color-brown-light: #BA8554
+$color-brown-dark: #A14F03
+$color-gray: #777
+$color-black: #000
+$color-white: #fff
+
+$button-shadow: (0 4px 4px rgba(0, 0, 0, 0.3))
+
+// Mixins
+
+@mixin header-first
+    font-weight: 800
+    font-size: 5rem
+    letter-spacing: 1rem
+    line-height: 6rem
+
+@mixin header-second 
+    font-weight: 100
+    font-size: 4rem
+    line-height: 4.8rem
+    letter-spacing: .5rem
+    text-transform: lowercase
+
+
+
+    
 // Global
  *, ::after, ::before
     margin: 0
@@ -8,7 +36,7 @@
     font-size: 62.5%
 
 body
-    font-family: "Lato", sans-serif
+    font-family: 'Lato', sans-serif
     color: #777
     font-size: 1.6rem
     letter-spacing: .2rem
@@ -42,28 +70,21 @@ body
     text-align: center
 
 .header__title 
-    color: #fff
+    color: $color-white
     &__first 
-      font-weight: 800
-      display: block
-      font-size: 5rem
-      letter-spacing: 1rem
-      line-height: 6rem
-      text-transform: uppercase
-      animation-name: LeftToRight
-      animation-duration: 1s
-      animation-delay: 0.5s
+        display: block
+        @include header-first
+        text-transform: uppercase
+        animation-name: LeftToRight
+        animation-duration: 1s
+        animation-delay: 0.5s
     &__second 
-      font-weight: 100
-      font-size: 4rem
-      line-height: 4.8rem
-      letter-spacing: .5rem
-      display: block
-      text-transform: lowercase
-      animation-name: RightToLeft
-      animation-duration: 1s
-      animation-delay: 0.5s
-      margin-bottom: 6.6rem
+        @include header-second 
+        display: block
+        animation-name: RightToLeft
+        animation-duration: 1s
+        animation-delay: 0.5s
+        margin-bottom: 6.6rem
 
 // buttons
 
@@ -72,41 +93,41 @@ body
     font-size: 2rem
     line-height: 2.4rem
     letter-spacing: .5rem
-    color: #777777
+    color: $color-gray
     position: relative
     &:link, &:visited
-      text-decoration: none
-      color: #777777
-      text-transform: uppercase
-      background-color: white
-      padding: 1.5rem 4rem
-      border-radius: 5rem
-      display: inline-block
-      transition: .3s
+        text-decoration: none
+        color: $color-gray
+        text-transform: uppercase
+        background-color: white
+        padding: 1.5rem 4rem
+        border-radius: 5rem
+        display: inline-block
+        transition: .3s
     &:hover 
-      transform: translateY(-3px)
-      box-shadow: (0 4px 4px rgba(0, 0, 0, 0.3))
-      &::after 
-        opacity: 0
-        transform: scaleX(1.5) scaleY(1.7)
+        transform: translateY(-3px)
+        box-shadow: $button-shadow
+      &::after
+            opacity: 0
+            transform: scaleX(1.5) scaleY(1.7)
     &:active
-      transform: translateY(1px)
-      box-shadow: (0 4px 4px rgba(0, 0, 0, 0.2))
+        transform: translateY(1px)
+        box-shadow: $button-shadow
     &::after 
-      content: ""
-      width: 100%
-      height: 100%
-      background: white
-      border-radius: 5rem
-      display: inline-block
-      position: absolute
-      top: 0
-      left: 0
-      z-index: -1
-      transition: all .5s
+        content: ""
+        width: 100%
+        height: 100%
+        background: $color-white
+        border-radius: 5rem
+        display: inline-block
+        position: absolute
+        top: 0
+        left: 0
+        z-index: -1
+        transition: all .5s
     &_animated
-      animation: BtnToTop 1s ease-out .5s 
-      animation-fill-mode: backwards
+        animation: BtnToTop 1s ease-out .5s 
+        animation-fill-mode: backwards
 
 
 // animations
