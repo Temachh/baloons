@@ -3,9 +3,8 @@
     font-size: 2rem
     line-height: 2.4rem
     letter-spacing: .5rem
-    color: $color-gray
+    color: red
     position: relative
-
     &:link, &:visited
      text-decoration: none
      color: $color-gray
@@ -15,15 +14,12 @@
      border-radius: 5rem
      display: inline-block
      transition: .3s
-
     &:hover 
      transform: translateY(-3px)
      box-shadow: $button-shadow
-
-      &::after
-        opacity: 0
-        transform: scaleX(1.5) scaleY(1.7)
-
+     &::after
+      opacity: 0
+      transform: scaleX(1.5) scaleY(1.7)
     &:active
      transform: translateY(1px)
      box-shadow: $button-shadow
@@ -44,3 +40,4 @@
     &_animated
      animation: BtnToTop 1s ease-out .5s 
      animation-fill-mode: backwards
+
