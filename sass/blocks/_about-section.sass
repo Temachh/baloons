@@ -1,0 +1,71 @@
+.about-section 
+    padding-top: 8rem
+    padding-bottom: 5rem
+
+// title
+
+.text-wrapper 
+    text-align: center
+    padding-bottom: 8rem
+.title-gardient
+    font-weight: 800
+    font-size: 3.6rem
+    letter-spacing: 1rem
+    background: linear-gradient(90deg, #C3956A 3.65%, #A24F03 100%)
+    -webkit-background-clip: text
+    -webkit-backface-visibility: hidden
+    color: transparent
+    text-align: center
+    text-transform: uppercase
+    backface-visibility: hidden
+    transition: all .7s
+    display: inline-block
+    &:hover
+     transform: scale(1.08)
+     text-shadow: (0 .4rem .4rem rgba($color-black, .25 ))
+
+// text block
+
+.item-card__wrapper
+    margin-bottom: 4.5rem
+    padding: 1rem
+    border-radius: .8rem
+    transition: all .4s
+    &:hover
+        background-color: $color-brown-dark
+        color: $color-white
+        transform: scale(1.1)
+        transform: translateY(-1rem)
+.card-title__wrapper 
+    margin-bottom: 1rem
+.card-title 
+    font-weight: 700
+    font-size: 2rem
+    line-height: 2.4rem
+    letter-spacing: .2rem
+
+// photo block
+
+.about_gallery
+    position: relative
+    &__photo
+        width: 55%
+        position: absolute
+        z-index: 5
+        transition: all .4s
+        border-radius: .5rem
+        &:hover
+            transform: scale(1.1)
+            z-index: 10
+            outline: .7rem solid $color-brown-light
+        &_first
+            top: 0
+            left: 0
+        &_second
+            top: 8rem
+            left: 18rem
+        &_third
+            top: 18rem
+            left: 2rem
+    &:hover &__photo:not(:hover)
+        transform: scale(0.9)
