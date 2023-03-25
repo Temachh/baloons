@@ -115,53 +115,6 @@ body {
   margin-bottom: 6.6rem;
 }
 
-<<<<<<< HEAD
-=======
-.row {
-  max-width: 114rem;
-  margin: 0 auto;
-}
-.row::after {
-  content: "";
-  display: table;
-  clear: both;
-}
-.row:not(:last-child) {
-  margin-bottom: 8rem;
-}
-
-[class^=col-] {
-  float: left;
-}
-[class^=col-]:not(:last-child) {
-  margin-right: 6rem;
-}
-
-.col-1-of-2 {
-  width: calc((100% - 6rem) / 2);
-}
-
-.col-1-of-3 {
-  width: calc((100% - 2 * 6rem) / 3);
-}
-
-.col-2-of-3 {
-  width: calc( 2 * ((100% - 2 * 6rem) / 3) + 6rem);
-}
-
-.col-1-of-4 {
-  width: calc((100% - 3* 6rem) / 4);
-}
-
-.col-2-of-4 {
-  width: calc( 2 * ((100% - 3 * 6rem) / 4) + 6rem);
-}
-
-.col-3-of-4 {
-  width: calc( 3 * ((100% - 3 * 6rem) / 4) + 2 * 6rem);
-}
-
->>>>>>> 996629fac40239ee766096d3919ba5af1b927665
 .about-section {
   padding-top: 8rem;
   padding-bottom: 5rem;
@@ -245,8 +198,6 @@ body {
 .about_gallery:hover .about_gallery__photo:not(:hover) {
   transform: scale(0.9);
 }
-
-<<<<<<< HEAD
 .adventure-section {
   background: linear-gradient(90deg, rgba(186, 133, 84, 0.7) 0.03%, rgba(1, 1, 1, 0.7) 99.94%), url(../img/background/adventure.jpg) center/cover no-repeat;
   padding: 21rem 10rem;
@@ -394,9 +345,6 @@ body {
   color: #fff;
   margin-bottom: 9rem;
 }
-
-=======
->>>>>>> 996629fac40239ee766096d3919ba5af1b927665
 .btn {
   font-weight: 600;
   font-size: 2rem;
