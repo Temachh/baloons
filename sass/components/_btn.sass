@@ -1,31 +1,29 @@
 .btn
+  &, &:link, &:visited
+    text-decoration: none
+    color: $color-gray
+    text-transform: uppercase
+    background-color: white
+    padding: 1.5rem 4rem
+    border-radius: 5rem
+    display: inline-block
+    transition: .3s
     font-weight: 600
     font-size: 2rem
     line-height: 2.4rem
-    letter-spacing: .5rem
-    color: red
+    letter-spacing: .5rem 
     position: relative
-    &:link, &:visited
-     text-decoration: none
-     color: $color-gray
-     text-transform: uppercase
-     background-color: white
-     padding: 1.5rem 4rem
-     border-radius: 5rem
-     display: inline-block
-     transition: .3s
+    outline: none
+    border: none
     &:hover 
-     transform: translateY(-3px)
-     box-shadow: $button-shadow
-
+      transform: translateY(-3px)
+      box-shadow: $button-shadow
       &::after
-        opacity: 0
-        transform: scaleX(1.5) scaleY(1.7)
-
+          opacity: 0
+          transform: scaleX(1.5) scaleY(1.7)
     &:active
      transform: translateY(1px)
      box-shadow: $button-shadow
-
     &::after 
      content: ""
      width: 100%
@@ -38,8 +36,13 @@
      left: 0
      z-index: -1
      transition: all .5s
-
     &_animated
      animation: BtnToTop 1s ease-out .5s 
      animation-fill-mode: backwards
+  &_brown
+    background: $color-brown-dark
+    color: $color-white
+    &::after
+      background: $color-brown-dark
+
 

@@ -14,11 +14,11 @@ body {
   font-size: 1.6rem;
   letter-spacing: 0.2rem;
   background-color: #E5E5E5;
-  padding: 2rem;
 }
 
 .container {
   background-color: #F7F7F7;
+  z-index: -3;
 }
 
 .row {
@@ -198,6 +198,7 @@ body {
 .about_gallery:hover .about_gallery__photo:not(:hover) {
   transform: scale(0.9);
 }
+
 .adventure-section {
   background: linear-gradient(90deg, rgba(186, 133, 84, 0.7) 0.03%, rgba(1, 1, 1, 0.7) 99.94%), url(../img/background/adventure.jpg) center/cover no-repeat;
   padding: 21rem 10rem;
@@ -316,7 +317,7 @@ body {
   letter-spacing: 0.2rem;
   position: relative;
   text-decoration-line: underline;
-  text-underline-offset: 0.3rem;
+  text-underline-offset: 0.4rem;
 }
 .tour-card_item:not(:last-child) {
   margin-bottom: 2rem;
@@ -345,15 +346,200 @@ body {
   color: #fff;
   margin-bottom: 9rem;
 }
-.btn {
-  font-weight: 600;
-  font-size: 2rem;
-  line-height: 2.4rem;
-  letter-spacing: 0.5rem;
-  color: red;
+
+.title-gardient__white {
+  color: #fff;
+}
+
+.reviews-section {
+  position: relative;
+  padding: 8rem 0;
+  z-index: 1;
+}
+.reviews-section_card {
+  width: 75%;
+  margin: 0 auto;
+  background-color: white;
+  padding: 5.5rem;
+  transform: skewX(-25deg);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
   position: relative;
 }
-.btn:link, .btn:visited {
+.reviews-section_card > * {
+  transform: skewX(25deg);
+}
+.reviews-section_card__img {
+  border-radius: 10rem;
+  float: left;
+  width: 16rem;
+  height: 16rem;
+  shape-outside: circle(50% at 50% 50%);
+  margin-right: 4rem;
+}
+.reviews-section_card__img img {
+  border-radius: 10rem;
+  height: 100%;
+  transition: all 0.5s;
+}
+.reviews-section_card__name {
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -15%);
+  text-align: center;
+  font-size: 2rem;
+  line-height: 2.9rem;
+  font-family: "Lato", sans-serif;
+  opacity: 0;
+  transition: all 0.5s;
+}
+.reviews-section_card:hover img {
+  transform: scale(0.9);
+  filter: blur(0.2rem) brightness(75%);
+}
+.reviews-section_card:hover .reviews-section_card__name {
+  opacity: 1;
+  transform: translate(-50%, -50%);
+}
+
+.btn_wrapper {
+  text-align: center;
+}
+
+.bg-video {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  z-index: -2;
+}
+
+.bg-gardient {
+  background: linear-gradient(90deg, rgba(186, 133, 84, 0.7), rgba(1, 1, 1, 0.7));
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.section-form {
+  background: linear-gradient(120deg, rgba(186, 133, 84, 0.7), #A14F03);
+  padding: 10rem;
+}
+
+.form__wrapper {
+  background: linear-gradient(114deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.8) 56%, rgba(186, 133, 84, 0.6563667703) 56%, rgba(161, 79, 3, 0.7) 100%), url(../img/background/form.jpg) center/cover no-repeat;
+  border-radius: 0.5rem;
+  width: 100%;
+  height: 52rem;
+  padding: 5rem;
+}
+.form_title {
+  margin-bottom: 3rem;
+  font-weight: 800;
+  color: transparent;
+  font-size: 3.4rem;
+  letter-spacing: 0.5rem;
+  background: linear-gradient(90deg, #C3956A 3.65%, #A24F03 100%);
+  -webkit-background-clip: text;
+  -webkit-backface-visibility: hidden;
+  text-transform: uppercase;
+}
+
+.input_wrapper:not(:last-child) {
+  margin-bottom: 3rem;
+}
+
+.form_input {
+  width: 50%;
+  padding: 2rem 0 2rem 2rem;
+  color: #000;
+  border: none;
+  border-bottom: 0.3rem solid transparent;
+  border-radius: 0.5rem;
+  transition: all 0.3s;
+  font-family: inherit;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 2rem;
+  letter-spacing: 0.2rem;
+}
+.form_input:focus {
+  outline: none;
+  border-bottom: 0.3rem solid #66D763;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
+}
+.form_input:focus:invalid {
+  border-bottom: 0.3rem solid #D76363;
+}
+
+.form_input:placeholder-shown + .form_label {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.form_label {
+  transition: 0.5s all;
+  display: block;
+  padding: 1rem 0 0 1.5rem;
+}
+
+.input_wrapper_radio {
+  width: 55%;
+  margin-bottom: 4rem;
+}
+
+.input_radio {
+  display: inline-block;
+  width: 45%;
+}
+
+.form_label__radio {
+  cursor: pointer;
+  position: relative;
+  padding-left: 4rem;
+}
+
+.radio_btn {
+  width: 3rem;
+  height: 3rem;
+  border: 0.5rem solid #A14F03;
+  border-radius: 50%;
+  display: block;
+  position: absolute;
+  top: -0.5rem;
+  left: -0.6rem;
+}
+.radio_btn::after {
+  content: "";
+  position: absolute;
+  width: 1.5rem;
+  height: 1.5rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #A14F03;
+  border-radius: 50%;
+  display: block;
+  opacity: 0;
+  transition: 0.3s all;
+}
+
+.radio:checked ~ .form_label__radio .radio_btn::after {
+  opacity: 1;
+}
+
+.radio {
+  display: none;
+}
+
+.btn, .btn:link, .btn:visited {
   text-decoration: none;
   color: #777;
   text-transform: uppercase;
@@ -362,20 +548,27 @@ body {
   border-radius: 5rem;
   display: inline-block;
   transition: 0.3s;
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 2.4rem;
+  letter-spacing: 0.5rem;
+  position: relative;
+  outline: none;
+  border: none;
 }
-.btn:hover {
+.btn:hover, .btn:link:hover, .btn:visited:hover {
   transform: translateY(-3px);
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
 }
-.btn:hover::after {
+.btn:hover::after, .btn:link:hover::after, .btn:visited:hover::after {
   opacity: 0;
-  transform: scaleX(1.5) scaleY(1.2);
+  transform: scaleX(1.5) scaleY(1.7);
 }
-.btn:active {
+.btn:active, .btn:link:active, .btn:visited:active {
   transform: translateY(1px);
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
 }
-.btn::after {
+.btn::after, .btn:link::after, .btn:visited::after {
   content: "";
   width: 100%;
   height: 100%;
@@ -388,9 +581,16 @@ body {
   z-index: -1;
   transition: all 0.5s;
 }
-.btn_animated {
+.btn_animated, .btn:link_animated, .btn:visited_animated {
   animation: BtnToTop 1s ease-out 0.5s;
   animation-fill-mode: backwards;
+}
+.btn_brown {
+  background: #A14F03;
+  color: #fff;
+}
+.btn_brown::after {
+  background: #A14F03;
 }
 
 @keyframes LeftToRight {
