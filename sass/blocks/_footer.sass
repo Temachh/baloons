@@ -1,0 +1,25 @@
+.footer-page
+    background: $color-footer
+.footer_wrapper 
+    text-align: center
+    padding: 8rem 0 5rem 0
+.user-list 
+    list-style-type: none
+    text-align: center
+    padding-bottom: 8rem
+.user-list_item
+    display: inline-block
+    &:not(:last-child)
+        margin-right: 5rem
+.user-list_link
+    &:link, &:visited
+        color: $color-white
+        text-decoration: none
+        text-transform: uppercase
+        transition: all .3s
+        display: inline-block
+    &:hover
+        color: $color-brown-light
+        transform: translateY(-.5rem)
+    &:active
+        transform: translateY(0)

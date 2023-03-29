@@ -15,6 +15,32 @@
 
 <body class="page_body">
     <div class="container">
+        <div class="navigation">
+            <input type="checkbox" class="nav__togler" id="nav">
+            <label for="nav" class="nav__button">
+                <span class="nav__icon"></span>
+            </label>
+            <div class="nav__background"></div>
+            <nav class="nav__wrapper">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">О нас</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="" class="nav__link">Скидки</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">Лучшие туры</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">Калькулятор цены</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">Связаться с нами</a>
+                    </li>
+                </ul>
+            </nav>
+           </div>
         <header class="header">
             <img class="header__img" src="img/icons/Icon-logo.svg" alt="Логотип" width="56" height="70">
             <div class="header__box">
@@ -250,28 +276,52 @@
 
                             <div class="input_wrapper_radio">
                                 <div class="input_radio">
-                                    <input  class="radio" type="radio" name="cheked" id="group" value="group">
-                                    <label for="group" class="form_label__radio"><span class="radio_btn"></span>Групповой тур</label>
+                                    <input class="radio" type="radio" name="cheked" id="group" value="group">
+                                    <label for="group" class="form_label__radio"><span
+                                            class="radio_btn"></span>Групповой тур</label>
                                 </div>
 
                                 <div class="input_radio">
                                     <input class="radio" type="radio" name="cheked" id="solo" value="solo">
-                                    <label for="solo" class="form_label__radio"><span class="radio_btn"></span>Индивидуальный тур</label>
+                                    <label for="solo" class="form_label__radio"><span
+                                            class="radio_btn"></span>Индивидуальный тур</label>
                                 </div>
                             </div>
-                            
-                                <button type="submit" class="btn btn_brown">Забронировать</button>
-                           
+
+                            <button type="submit" class="btn btn_brown">Забронировать</button>
+
                         </form>
 
                     </div>
                 </div>
             </section>
         </main>
-
-
-
-
+        <footer class="footer-page">
+            <div class="row footer_wrapper">
+                <a class="footer_img__link">
+                    <img src="img/icons/Icon-logo.svg" alt="baloon" class="footer-page_img" width="120" height="150">
+                </a>                
+            </div>
+            <div class="row">
+                <ul class="user-list">
+                    <li class="user-list_item">
+                        <a href="#" class="user-list_link">О нас</a>
+                    </li>
+                    <li class="user-list_item">
+                        <a href="" class="user-list_link">Скидки</a>
+                    </li>
+                    <li class="user-list_item">
+                        <a href="#" class="user-list_link">Лучшие туры</a>
+                    </li>
+                    <li class="user-list_item">
+                        <a href="#" class="user-list_link">Калькулятор цены</a>
+                    </li>
+                    <li class="user-list_item">
+                        <a href="#" class="user-list_link">Связаться с нами</a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
 
         <!--
         <section class="test">
