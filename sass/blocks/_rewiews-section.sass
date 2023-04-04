@@ -9,15 +9,22 @@
     padding: 8rem 0
     z-index: 1
     &_card
-        width: 75%
+        width: 60%
         margin: 0 auto
         background-color: rgba($color-white, 8 )
         padding: 5.5rem
         transform: skewX(-25deg)
         box-shadow: $button-shadow
         position: relative
+        @include respond(tab-port)
+            transform: skewX(-15deg)
+            text-align: center
+        @include respond(tab-land)
+            width: 75%
         & > *
             transform: skewX(25deg)
+            @include respond(tab-port)
+            transform: skewX(15deg)
         &__img
             border-radius: 10rem
             float: left
@@ -25,6 +32,10 @@
             height: 16rem
             shape-outside: circle(50% at 50% 50%)
             margin-right: 4rem
+            @include respond(tab-port)
+                float: none
+                margin: 0 auto
+                margin-bottom: 2rem
             img
                 border-radius: 10rem
                 height: 100%

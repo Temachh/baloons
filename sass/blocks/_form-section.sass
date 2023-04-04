@@ -8,6 +8,8 @@
         width: 100%
         height: 52rem
         padding: 5rem
+        @include respond(tab-port)
+            background: linear-gradient(114deg, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0.8) 506%, rgba(186,133,84,0.6563667703409488) 56%, rgba(161,79,3,0.7) 100%) , url(../img/background/form.jpg) center / cover no-repeat
     &_title
         margin-bottom: 3rem
         font-weight: 800
@@ -18,8 +20,12 @@
         -webkit-background-clip: text
         -webkit-backface-visibility: hidden
         text-transform: uppercase
+        @include respond(tab-land)
+            font-size: 2.9rem
 .input_wrapper:not(:last-child)
     margin-bottom: 3rem
+    @include respond(tab-land)
+    margin-bottom: 1rem
 
 // inputs text
 
@@ -36,6 +42,9 @@
     font-weight: 400
     line-height: 2rem
     letter-spacing: .2rem
+    @include respond(tab-port)
+        width: 100%
+        box-shadow: $button-shadow
     &:focus
         outline: none
         border-bottom: .3rem solid #66D763
@@ -56,9 +65,19 @@
 .input_wrapper_radio 
     width: 55%
     margin-bottom: 4rem
+    @include respond(tab-land)
+        width: 40%
+    @include respond(tab-port)
+        width: 100%
 .input_radio 
     display: inline-block
     width: 45%
+    @include respond(tab-land)
+        display: block
+        width: 100%
+        &:not(:last-child)
+            margin-bottom: 1.7rem
+            
    
 .form_label__radio 
     cursor: pointer

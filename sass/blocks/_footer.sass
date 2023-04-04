@@ -11,6 +11,8 @@
     display: inline-block
     &:not(:last-child)
         margin-right: 5rem
+        @include respond(tab-port)
+            margin-bottom: 2rem
 .user-list_link
     &:link, &:visited
         color: $color-white

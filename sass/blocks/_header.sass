@@ -27,6 +27,9 @@
         animation-name: LeftToRight
         animation-duration: 1s
         animation-delay: 0.5s
+        margin-bottom: 2rem
+        @include respond(tab-land)
+            font-size: 4rem
     &__second 
         @include header-second 
         display: block
@@ -34,3 +37,6 @@
         animation-duration: 1s
         animation-delay: 0.5s
         margin-bottom: 6.6rem
+        @include respond(tab-land)
+            font-size: 3.2rem
+            margin-bottom: 2rem

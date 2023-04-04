@@ -9,6 +9,11 @@
         border-radius: .5rem
         transition: all .5s
         box-shadow: $button-shadow
+        box-sizing: border-box
+        @include respond(tab-land)
+            padding: 2.3rem
+        @include respond(tab-port)
+            height: 100%
         &:hover
             transform: scale(1.1) translateY(-1rem)
     &__icon

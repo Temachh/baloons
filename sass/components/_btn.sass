@@ -15,6 +15,12 @@
     position: relative
     outline: none
     border: none
+    @include respond(tab-land)
+      font-size: 1.6rem
+      padding: 1rem 3rem
+    @include respond(tab-port)
+      font-size: 1.6rem
+      padding: 2rem 5rem
     &:hover 
       transform: translateY(-3px)
       box-shadow: $button-shadow
@@ -44,5 +50,5 @@
     color: $color-white
     &::after
       background: $color-brown-dark
-
+  
 

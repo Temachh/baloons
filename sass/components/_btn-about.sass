@@ -5,6 +5,12 @@
         padding: 1rem
         position: relative
         transition: transform .5s
+    @include respond(tab-port)
+       background-color: $color-brown-light
+       color: $color-white
+    @include respond(phone)
+        color: $color-white
+
     &:hover
         background-color: $color-brown-light
         color: $color-white
